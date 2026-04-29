@@ -33,11 +33,11 @@ const Hero = ({ profile }) => (
         {profile?.title || 'AI/ML Engineer'}
       </p>
       <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-        <a href={profile?.github} className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Github size={20} /> GitHub</a>
-        <a href={profile?.linkedin} className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Linkedin size={20} /> LinkedIn</a>
-        <a href={profile?.leetcode} className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Code size={20} /> LeetCode</a>
-        <a href={profile?.codolio} className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Cpu size={20} /> Codolio</a>
-        {profile?.resume && <a href={profile.resume} target="_blank" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--primary)' }}><Download size={20} /> Resume</a>}
+        <a href={profile?.github || 'https://github.com/monudbg'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Github size={20} /> GitHub</a>
+        <a href={profile?.linkedin || 'https://linkedin.com/in/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Linkedin size={20} /> LinkedIn</a>
+        <a href={profile?.leetcode || 'https://leetcode.com/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Code size={20} /> LeetCode</a>
+        <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Cpu size={20} /> Codolio</a>
+        {profile?.resume && <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--primary)' }}><Download size={20} /> Resume</a>}
       </div>
     </motion.div>
   </section>
@@ -62,8 +62,8 @@ const About = ({ profile }) => (
             Solved <strong>1000+ problems</strong> across LeetCode, Codolio, and other platforms.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href={profile?.leetcode} target="_blank" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>LeetCode &rarr;</a>
-            <a href={profile?.codolio} target="_blank" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>Codolio &rarr;</a>
+            <a href={profile?.leetcode || 'https://leetcode.com/monumanish'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>LeetCode &rarr;</a>
+            <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>Codolio &rarr;</a>
           </div>
         </div>
       </div>
@@ -127,8 +127,8 @@ const ProjectCard = ({ project }) => (
         ))}
       </div>
       <div style={{ marginTop: 'auto', display: 'flex', gap: '1rem' }}>
-        <a href={project.github_link} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.9rem' }}><Github size={16} /> Code</a>
-        {project.live_link && <a href={project.live_link} style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.9rem' }}><ExternalLink size={16} /> Demo</a>}
+        <a href={project.github_link} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.9rem' }}><Github size={16} /> Code</a>
+        {project.live_link && <a href={project.live_link} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center', gap: '0.3rem', fontSize: '0.9rem' }}><ExternalLink size={16} /> Demo</a>}
       </div>
     </div>
   </motion.div>
@@ -151,10 +151,10 @@ const Contact = ({ profile }) => (
       <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>Get in <span className="gradient-text">Touch</span></h2>
       <p style={{ color: 'var(--text-muted)', marginBottom: '3rem' }}>I'm currently looking for new opportunities in AI/ML research and development.</p>
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '2rem' }}>
-        <a href={`mailto:${profile?.email}`} className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
-          <MailIcon size={24} /> {profile?.email}
+        <a href={`mailto:${profile?.email || 'monumanish9873@gmail.com'}`} className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <MailIcon size={24} /> {profile?.email || 'monumanish9873@gmail.com'}
         </a>
-        <a href={profile?.linkedin} className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <a href={profile?.linkedin || 'https://linkedin.com/in/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <Linkedin size={24} /> LinkedIn
         </a>
       </div>
@@ -163,9 +163,28 @@ const Contact = ({ profile }) => (
 );
 
 const App = () => {
-  const [profile, setProfile] = useState(null);
-  const [skills, setSkills] = useState([]);
-  const [projects, setProjects] = useState([]);
+  const [profile, setProfile] = useState({
+    name: 'Monu Manish',
+    title: 'AI/ML Engineer',
+    bio: 'I am a passionate AI/ML Engineer and Undergraduate student at IIIT Una, focused on building intelligent systems and solving complex problems through data-driven approaches.',
+    github: 'https://github.com/monudbg',
+    linkedin: 'https://linkedin.com/in/monumanish',
+    leetcode: 'https://leetcode.com/monumanish',
+    codolio: 'https://codolio.com/profile/monumanish',
+    email: 'monumanish9873@gmail.com'
+  });
+  const [skills, setSkills] = useState([
+    { id: 1, name: 'Python', category: 'Languages' },
+    { id: 2, name: 'C++', category: 'Languages' },
+    { id: 3, name: 'PyTorch', category: 'AI/ML' },
+    { id: 4, name: 'TensorFlow', category: 'AI/ML' },
+    { id: 5, name: 'React', category: 'Frontend' },
+    { id: 6, name: 'Django', category: 'Backend' }
+  ]);
+  const [projects, setProjects] = useState([
+    { id: 1, title: 'Medical Report Analyzer', year: '2024', description: 'AI-powered system to analyze medical reports and provide insights.', tech_stack: 'Python, PyTorch, React', github_link: 'https://github.com/monudbg/medical-analyzer' },
+    { id: 2, title: 'ATS Resume Optimizer', year: '2024', description: 'Tool to optimize resumes for Applicant Tracking Systems using NLP.', tech_stack: 'NLP, Python, Flask', github_link: 'https://github.com/monudbg/resume-optimizer' }
+  ]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
