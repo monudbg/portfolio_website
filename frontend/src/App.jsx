@@ -34,9 +34,9 @@ const Hero = ({ profile }) => (
       </p>
       <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         <a href={profile?.github || 'https://github.com/monudbg'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Github size={20} /> GitHub</a>
-        <a href={profile?.linkedin || 'https://linkedin.com/in/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Linkedin size={20} /> LinkedIn</a>
+        <a href={profile?.linkedin || 'https://www.linkedin.com/in/monu-manish-64145428a/'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Linkedin size={20} /> LinkedIn</a>
         <a href={profile?.leetcode || 'https://leetcode.com/u/monumanish9873/'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Code size={20} /> LeetCode</a>
-        <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Cpu size={20} /> Codolio</a>
+        <a href={profile?.codolio || 'https://codolio.com/profile/monumanish9873'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Cpu size={20} /> Codolio</a>
         {profile?.resume && <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--primary)' }}><Download size={20} /> Resume</a>}
       </div>
     </motion.div>
@@ -63,7 +63,7 @@ const About = ({ profile }) => (
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <a href={profile?.leetcode || 'https://leetcode.com/u/monumanish9873/'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>LeetCode &rarr;</a>
-            <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>Codolio &rarr;</a>
+            <a href={profile?.codolio || 'https://codolio.com/profile/monumanish9873'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>Codolio &rarr;</a>
           </div>
         </div>
       </div>
@@ -154,7 +154,7 @@ const Contact = ({ profile }) => (
         <a href={`mailto:${profile?.email || 'monumanish9873@gmail.com'}`} className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <MailIcon size={24} /> {profile?.email || 'monumanish9873@gmail.com'}
         </a>
-        <a href={profile?.linkedin || 'https://linkedin.com/in/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <a href={profile?.linkedin || 'https://www.linkedin.com/in/monu-manish-64145428a/'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '1rem 2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
           <Linkedin size={24} /> LinkedIn
         </a>
       </div>
@@ -168,9 +168,9 @@ const App = () => {
     title: 'AI/ML Engineer',
     bio: 'I am a passionate AI/ML Engineer and Undergraduate student at IIIT Una, focused on building intelligent systems and solving complex problems through data-driven approaches.',
     github: 'https://github.com/monudbg',
-    linkedin: 'https://linkedin.com/in/monumanish',
+    linkedin: 'https://www.linkedin.com/in/monu-manish-64145428a/',
     leetcode: 'https://leetcode.com/u/monumanish9873/',
-    codolio: 'https://codolio.com/profile/monumanish',
+    codolio: 'https://codolio.com/profile/monumanish9873',
     email: 'monumanish9873@gmail.com'
   });
   const [skills, setSkills] = useState([
