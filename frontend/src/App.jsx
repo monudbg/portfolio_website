@@ -35,7 +35,7 @@ const Hero = ({ profile }) => (
       <div style={{ display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>
         <a href={profile?.github || 'https://github.com/monudbg'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Github size={20} /> GitHub</a>
         <a href={profile?.linkedin || 'https://linkedin.com/in/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Linkedin size={20} /> LinkedIn</a>
-        <a href={profile?.leetcode || 'https://leetcode.com/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Code size={20} /> LeetCode</a>
+        <a href={profile?.leetcode || 'https://leetcode.com/u/monumanish9873/'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Code size={20} /> LeetCode</a>
         <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}><Cpu size={20} /> Codolio</a>
         {profile?.resume && <a href={profile.resume} target="_blank" rel="noopener noreferrer" className="glass" style={{ padding: '0.8rem 1.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', background: 'var(--primary)' }}><Download size={20} /> Resume</a>}
       </div>
@@ -62,7 +62,7 @@ const About = ({ profile }) => (
             Solved <strong>1000+ problems</strong> across LeetCode, Codolio, and other platforms.
           </p>
           <div style={{ display: 'flex', gap: '1rem' }}>
-            <a href={profile?.leetcode || 'https://leetcode.com/monumanish'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>LeetCode &rarr;</a>
+            <a href={profile?.leetcode || 'https://leetcode.com/u/monumanish9873/'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>LeetCode &rarr;</a>
             <a href={profile?.codolio || 'https://codolio.com/profile/monumanish'} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontSize: '0.85rem' }}>Codolio &rarr;</a>
           </div>
         </div>
@@ -169,7 +169,7 @@ const App = () => {
     bio: 'I am a passionate AI/ML Engineer and Undergraduate student at IIIT Una, focused on building intelligent systems and solving complex problems through data-driven approaches.',
     github: 'https://github.com/monudbg',
     linkedin: 'https://linkedin.com/in/monumanish',
-    leetcode: 'https://leetcode.com/monumanish',
+    leetcode: 'https://leetcode.com/u/monumanish9873/',
     codolio: 'https://codolio.com/profile/monumanish',
     email: 'monumanish9873@gmail.com'
   });
