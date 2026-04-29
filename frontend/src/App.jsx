@@ -160,7 +160,7 @@ const Resume = ({ profile }) => (
       </div>
       <div style={{ marginTop: '4rem' }}>
         <a 
-          href={profile?.resume || '#'} 
+          href={profile?.resume || 'https://drive.google.com/file/d/1Mw1a26vgV5PlV_6u3vdenq15JiMjllZF/view?usp=sharing'} 
           target="_blank" 
           rel="noopener noreferrer" 
           className="glass" 
@@ -210,6 +210,7 @@ const App = () => {
     linkedin: 'https://www.linkedin.com/in/monu-manish-64145428a/',
     leetcode: 'https://leetcode.com/u/monumanish9873/',
     codolio: 'https://codolio.com/profile/monumanish9873',
+    resume: 'https://drive.google.com/file/d/1Mw1a26vgV5PlV_6u3vdenq15JiMjllZF/view?usp=sharing',
     email: 'monumanish9873@gmail.com'
   });
   const [skills, setSkills] = useState([
