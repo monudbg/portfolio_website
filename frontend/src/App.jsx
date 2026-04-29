@@ -7,11 +7,12 @@ const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 const Navbar = () => (
   <nav className="glass" style={{ position: 'fixed', top: '20px', left: '50%', transform: 'translateX(-50%)', width: '90%', maxWidth: '1200px', zIndex: 1000, padding: '1rem 2rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-    <h2 style={{ fontSize: '1.2rem', fontWeight: 800 }}>M.M<span className="gradient-text">.</span></h2>
+    <h2 style={{ fontSize: '1.2rem', fontWeight: 800 }}>Monu Manish<span className="gradient-text">.</span></h2>
     <div style={{ display: 'flex', gap: '2rem', fontSize: '0.9rem', fontWeight: 500 }}>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
       <a href="#contact">Contact</a>
     </div>
   </nav>
@@ -134,6 +135,44 @@ const ProjectCard = ({ project }) => (
   </motion.div>
 );
 
+const Resume = ({ profile }) => (
+  <section id="resume" className="container">
+    <div className="glass" style={{ padding: '4rem 2rem', textAlign: 'center', background: 'linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(168, 85, 247, 0.1))' }}>
+      <h2 style={{ fontSize: '2.5rem', marginBottom: '1rem' }}>My <span className="gradient-text">Resume</span></h2>
+      <p style={{ color: 'var(--text-muted)', marginBottom: '3rem', maxWidth: '600px', margin: '0 auto 3rem' }}>
+        Download my full resume to see a detailed breakdown of my experience, technical skills, and academic achievements.
+      </p>
+      <div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', flexWrap: 'wrap' }}>
+        <div className="glass" style={{ padding: '2rem', width: '300px', textAlign: 'left' }}>
+          <h3 style={{ marginBottom: '1rem' }}>Education</h3>
+          <p style={{ fontWeight: 600 }}>IIIT Una</p>
+          <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>B.Tech in Information Technology</p>
+          <p style={{ fontSize: '0.8rem', color: 'var(--primary)' }}>2022 - 2026</p>
+        </div>
+        <div className="glass" style={{ padding: '2rem', width: '300px', textAlign: 'left' }}>
+          <h3 style={{ marginBottom: '1rem' }}>Focus Areas</h3>
+          <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+            <li>• Artificial Intelligence</li>
+            <li>• Machine Learning</li>
+            <li>• Competitive Programming</li>
+          </ul>
+        </div>
+      </div>
+      <div style={{ marginTop: '4rem' }}>
+        <a 
+          href={profile?.resume || '#'} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="glass" 
+          style={{ padding: '1.2rem 3rem', fontSize: '1.1rem', fontWeight: 600, background: 'var(--primary)', color: 'white', display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}
+        >
+          <Download size={24} /> Download Full CV
+        </a>
+      </div>
+    </div>
+  </section>
+);
+
 const Projects = ({ projects }) => (
   <section id="projects" className="container">
     <h2 style={{ fontSize: '2.5rem', marginBottom: '4rem', textAlign: 'center' }}>Featured <span className="gradient-text">Projects</span></h2>
@@ -223,6 +262,7 @@ const App = () => {
       <About profile={profile} />
       <Skills skills={skills} />
       <Projects projects={projects} />
+      <Resume profile={profile} />
       <Contact profile={profile} />
       
       <footer style={{ padding: '4rem 0', textAlign: 'center', borderTop: '1px solid var(--border)', color: 'var(--text-muted)', fontSize: '0.9rem' }}>
